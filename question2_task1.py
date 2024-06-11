@@ -7,11 +7,11 @@ new_book = ('Escaping the  Build Trap', 'Melissa Perri')
 
 
 def add_book(atuple):
-    if isinstance(atuple, tuple) not in library:
+    if isinstance(atuple, tuple) and atuple not in library:
         library.append(atuple)
         print(f"{atuple} has been added to the library!")
         print(f"Complete library list: {library}")
-    elif isinstance(atuple, tuple) in library:
+    elif isinstance(atuple, tuple) and atuple in library:
         print("Will not add to library. Book is already in library")
         print(f"Complete library list: {library}")
 
